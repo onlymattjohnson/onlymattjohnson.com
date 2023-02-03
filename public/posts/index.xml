@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Matt Johnson</title>
+    <link>http://onlymattjohnson.com/posts/</link>
+    <description>Recent content in Posts on Matt Johnson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Feb 2023 11:32:18 -0600</lastBuildDate><atom:link href="http://onlymattjohnson.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A First Post</title>
+      <link>http://onlymattjohnson.com/posts/2023-02-03-first-post/</link>
+      <pubDate>Fri, 03 Feb 2023 11:32:18 -0600</pubDate>
+      
+      <guid>http://onlymattjohnson.com/posts/2023-02-03-first-post/</guid>
+      <description>Hello! Welcome to my new website. This is a first post for my updated site that I would like to begin blogging on. The site is built with Hugo using a modificatio of the Archie theme
+I will be making small tweaks here and there and figuring out how to automatically deploy this to my server, but first thing is first and I&amp;rsquo;m getting the site up and running. This is a first post to allow for that.</description>
+    </item>
+    
+  </channel>
+</rss>

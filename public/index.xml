@@ -5,15 +5,27 @@
     <link>http://onlymattjohnson.com/</link>
     <description>Recent content on Matt Johnson</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://onlymattjohnson.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Feb 2023 11:32:18 -0600</lastBuildDate><atom:link href="http://onlymattjohnson.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About Me</title>
+      <title>A First Post</title>
+      <link>http://onlymattjohnson.com/posts/2023-02-03-first-post/</link>
+      <pubDate>Fri, 03 Feb 2023 11:32:18 -0600</pubDate>
+      
+      <guid>http://onlymattjohnson.com/posts/2023-02-03-first-post/</guid>
+      <description>Hello! Welcome to my new website. This is a first post for my updated site that I would like to begin blogging on. The site is built with Hugo using a modificatio of the Archie theme
+I will be making small tweaks here and there and figuring out how to automatically deploy this to my server, but first thing is first and I&amp;rsquo;m getting the site up and running. This is a first post to allow for that.</description>
+    </item>
+    
+    <item>
+      <title>Oh, hello there. I&#39;m Matt 👋</title>
       <link>http://onlymattjohnson.com/about/</link>
       <pubDate>Fri, 03 Feb 2023 11:12:22 -0600</pubDate>
       
       <guid>http://onlymattjohnson.com/about/</guid>
-      <description>
-Oh, hello there. I&amp;rsquo;m Matt 👋 </description>
+      <description>I’ve spent the better part of the last 17 years gathering, cleaning, and transforming data to find meaning and to move organizations forward. I’ve worked for non-profits, labor unions, governments, and a few universities.
+Most days, I am writing SQL, building data pipelines, and modeling data. I find problems and I fix problems. Once the problems are fixed, I build reports to provide usable information to my colleagues.
+I was born and raised in Chicago, but I currently live in the northwest suburbs.</description>
     </item>
     
   </channel>
