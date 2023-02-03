@@ -1,4 +1,25 @@
 baseURL = 'http://onlymattjohnson.com/'
 languageCode = 'en-us'
 title = 'Matt Johnson'
-theem = 'archie'
+theme = 'archie'
+
+[params]
+    mode="auto"
+    useCDN=false
+
+[[params.social]]
+name="GitHub"
+icon="github"
+url="https://github.com/onlymattjohnson"
+
+# Main menu Items
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 2
