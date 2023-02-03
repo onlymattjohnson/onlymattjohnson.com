@@ -6,7 +6,17 @@
     <description>Recent content on Matt Johnson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Feb 2023 11:32:18 -0600</lastBuildDate><atom:link href="http://onlymattjohnson.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Feb 2023 11:56:14 -0600</lastBuildDate><atom:link href="http://onlymattjohnson.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning About Linux Permissions</title>
+      <link>http://onlymattjohnson.com/2023/02/03/learning-about-linux-permissions/</link>
+      <pubDate>Fri, 03 Feb 2023 11:56:14 -0600</pubDate>
+      
+      <guid>http://onlymattjohnson.com/2023/02/03/learning-about-linux-permissions/</guid>
+      <description>So, who knows what&amp;rsquo;s a good pace for writing blog posts, but since I&amp;rsquo;m in the habit of writing up notes about new things I learn, might as well write a post even though I already put one up earlier today.
+Permissions So, I&amp;rsquo;ve got this website running on a linux server which serves this out of a directory /var/www/onlymattjohnson.com which is owned by the www-data group. I was trying to upload the files by ftp for my user but I found that I couldn&amp;rsquo;t write to the folder.</description>
+    </item>
+    
     <item>
       <title>A First Post</title>
       <link>http://onlymattjohnson.com/2023/02/03/a-first-post/</link>

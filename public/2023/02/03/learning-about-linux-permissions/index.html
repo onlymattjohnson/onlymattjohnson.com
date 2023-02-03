@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Learning About Linux Permissions - Matt Johnson</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="So, who knows what&rsquo;s a good pace for writing blog posts, but since I&rsquo;m in the habit of writing up notes about new things I learn, might as well write a post even though I already put one up earlier today.
+Permissions So, I&rsquo;ve got this website running on a linux server which serves this out of a directory /var/www/onlymattjohnson.com which is owned by the www-data group. I was trying to upload the files by ftp for my user but I found that I couldn&rsquo;t write to the folder." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Learning About Linux Permissions" />
+<meta property="og:description" content="So, who knows what&rsquo;s a good pace for writing blog posts, but since I&rsquo;m in the habit of writing up notes about new things I learn, might as well write a post even though I already put one up earlier today.
+Permissions So, I&rsquo;ve got this website running on a linux server which serves this out of a directory /var/www/onlymattjohnson.com which is owned by the www-data group. I was trying to upload the files by ftp for my user but I found that I couldn&rsquo;t write to the folder." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://onlymattjohnson.com/2023/02/03/learning-about-linux-permissions/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-03T11:56:14-06:00" />
+<meta property="article:modified_time" content="2023-02-03T11:56:14-06:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learning About Linux Permissions"/>
+<meta name="twitter:description" content="So, who knows what&rsquo;s a good pace for writing blog posts, but since I&rsquo;m in the habit of writing up notes about new things I learn, might as well write a post even though I already put one up earlier today.
+Permissions So, I&rsquo;ve got this website running on a linux server which serves this out of a directory /var/www/onlymattjohnson.com which is owned by the www-data group. I was trying to upload the files by ftp for my user but I found that I couldn&rsquo;t write to the folder."/>
+<script src="http://onlymattjohnson.com/js/feather.min.js"></script>
+	
+	
+        <link href="http://onlymattjohnson.com/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://onlymattjohnson.com/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://onlymattjohnson.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://onlymattjohnson.com/">Matt Johnson</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Learning About Linux Permissions</h1>
+			<div class="meta">Posted on Feb 3, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<p>So, who knows what&rsquo;s a good pace for writing blog posts, but since I&rsquo;m in the habit of writing up notes about new things I learn, might as well write a post even though I already put one up earlier today.</p>
+<h1 id="permissions">Permissions</h1>
+<p>So, I&rsquo;ve got this website running on a linux server which serves this out of a directory <code>/var/www/onlymattjohnson.com</code> which is owned by the <strong>www-data</strong> group. I was trying to upload the files by ftp for my user but I found that I couldn&rsquo;t write to the folder. So, I figured the folder is owned by <strong>www-data</strong> let&rsquo;s add myself to that group.</p>
+<pre tabindex="0"><code>&gt; sudo usermod -a -G www-data &lt;my_username&gt;
+</code></pre><p>Now I&rsquo;m in the group but still having issues writing. Turns out linux permissions are to the owner, group members of the owner, and then everyone else. Whoopsie. I need to give this whole group writing permissions.</p>
+<pre tabindex="0"><code>&gt; chmod g+w /var/www/onlymattjohnson.com
+</code></pre><p>Once that was done, everything is working according to plan. If this page is up, I think we did it correctly.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/onlymattjohnson" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    (c) 2023  Matt Johnson
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
