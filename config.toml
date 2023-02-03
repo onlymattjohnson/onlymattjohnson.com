@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Matt Johnson'
 theme = 'archie'
 
+[permalinks]
+    posts= '/:year/:month/:day/:title/'
+
 [params]
     mode="auto"
     useCDN=false
