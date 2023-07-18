@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://onlymattjohnson.com/</loc>
+    <lastmod>2023-07-18T15:22:25-05:00</lastmod>
+  </url><url>
+    <loc>http://onlymattjohnson.com/2023/07/18/oh-my-cron/</loc>
+    <lastmod>2023-07-18T15:22:25-05:00</lastmod>
+  </url><url>
+    <loc>http://onlymattjohnson.com/posts/</loc>
+    <lastmod>2023-07-18T15:22:25-05:00</lastmod>
+  </url><url>
     <loc>http://onlymattjohnson.com/data/</loc>
     <lastmod>2023-07-18T14:50:13-05:00</lastmod>
   </url><url>
     <loc>http://onlymattjohnson.com/2023/02/03/learning-about-linux-permissions/</loc>
-    <lastmod>2023-02-03T11:56:14-06:00</lastmod>
-  </url><url>
-    <loc>http://onlymattjohnson.com/</loc>
-    <lastmod>2023-02-03T11:56:14-06:00</lastmod>
-  </url><url>
-    <loc>http://onlymattjohnson.com/posts/</loc>
     <lastmod>2023-02-03T11:56:14-06:00</lastmod>
   </url><url>
     <loc>http://onlymattjohnson.com/2023/02/03/a-first-post/</loc>

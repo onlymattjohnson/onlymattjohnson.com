@@ -6,7 +6,18 @@
     <description>Recent content on Matt Johnson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Feb 2023 11:56:14 -0600</lastBuildDate><atom:link href="http://onlymattjohnson.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 15:22:25 -0500</lastBuildDate><atom:link href="http://onlymattjohnson.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oh My Cron</title>
+      <link>http://onlymattjohnson.com/2023/07/18/oh-my-cron/</link>
+      <pubDate>Tue, 18 Jul 2023 15:22:25 -0500</pubDate>
+      
+      <guid>http://onlymattjohnson.com/2023/07/18/oh-my-cron/</guid>
+      <description>Oh boy. I feel like I may never truly understand how cron works compared to other task scheduling applications. Today I went through a whole mess of steps to try and get a job scheduled to automatically generate my github contributions chart.
+What happened? So, I was able to use the lovely githubchart gem to generate my githubchart SVG with no issues at all. It was so simple.
+&amp;gt; gem install githubchart &amp;gt; githubchart -u onlymattjohnson .</description>
+    </item>
+    
     <item>
       <title>Personal Data Metrics</title>
       <link>http://onlymattjohnson.com/data/</link>

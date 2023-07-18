@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Oh My Cron - Matt Johnson</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Oh boy. I feel like I may never truly understand how cron works compared to other task scheduling applications. Today I went through a whole mess of steps to try and get a job scheduled to automatically generate my github contributions chart.
+What happened? So, I was able to use the lovely githubchart gem to generate my githubchart SVG with no issues at all. It was so simple.
+&gt; gem install githubchart &gt; githubchart -u onlymattjohnson ." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Oh My Cron" />
+<meta property="og:description" content="Oh boy. I feel like I may never truly understand how cron works compared to other task scheduling applications. Today I went through a whole mess of steps to try and get a job scheduled to automatically generate my github contributions chart.
+What happened? So, I was able to use the lovely githubchart gem to generate my githubchart SVG with no issues at all. It was so simple.
+&gt; gem install githubchart &gt; githubchart -u onlymattjohnson ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://onlymattjohnson.com/2023/07/18/oh-my-cron/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-18T15:22:25-05:00" />
+<meta property="article:modified_time" content="2023-07-18T15:22:25-05:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Oh My Cron"/>
+<meta name="twitter:description" content="Oh boy. I feel like I may never truly understand how cron works compared to other task scheduling applications. Today I went through a whole mess of steps to try and get a job scheduled to automatically generate my github contributions chart.
+What happened? So, I was able to use the lovely githubchart gem to generate my githubchart SVG with no issues at all. It was so simple.
+&gt; gem install githubchart &gt; githubchart -u onlymattjohnson ."/>
+<script src="http://onlymattjohnson.com/js/feather.min.js"></script>
+	
+	
+        <link href="http://onlymattjohnson.com/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://onlymattjohnson.com/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://onlymattjohnson.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://onlymattjohnson.com/">Matt Johnson</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/data">Data</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Oh My Cron</h1>
+			<div class="meta">Posted on Jul 18, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Oh boy. I feel like I may never truly understand how cron works compared to other task scheduling applications. Today I went through a whole mess of steps to try and get a job scheduled to automatically generate my <a href="/data">github contributions chart</a>.</p>
+<h2 id="what-happened">What happened?</h2>
+<p>So, I was able to use the lovely <a href="https://github.com/akerl/githubchart">githubchart</a> gem to generate my githubchart SVG with no issues at all. It was so simple.</p>
+<pre tabindex="0"><code>&gt; gem install githubchart
+&gt; githubchart -u onlymattjohnson ./github.svg
+</code></pre><p>Since this was so easy I thought just dropping that in <code>cron</code> to run every 15 minutes or so would be straightforward. I get to keep hugo generating my static site and then in the background this script can just refresh the image.</p>
+<p>⛔ I was wrong.</p>
+<p>I added the commands I needed to the an entry in <code>crontab -e</code> and then waited to see the image render. It did not. I checked my logs and I see this message (I removed some of the folder names because you don&rsquo;t need to know all that)</p>
+<pre tabindex="0"><code>/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe&#39;: can&#39;t find gem githubchart (&gt;= 0.a) with executable githubchart (Gem::GemNotFoundException)
+        from /usr/lib/ruby/2.7.0/rubygems.rb:294:in `activate_bin_path&#39;
+        from /home/XXXXXXXXX/gems/bin/githubchart:23:in `&lt;main&gt;&#39;
+</code></pre><h2 id="can-this-be-fixed">Can this be fixed?</h2>
+<p>Every suggestion google through back at me involved installing <a href="https://rvm.io/">RVM</a>, which to be fair I should have already done. From there, I should let RVM setup my cron headers.</p>
+<pre tabindex="0"><code>&gt; rvm cron setup
+</code></pre><p>So, I installed RVM, which was fast. Then, I installed ruby through RVM, which did not go so fast. Finally, I reinstalled <code>githubchart</code> with the new ruby being managed by RVM.</p>
+<p>Now, I entered the magic command <code>rvm cron setup</code>, verified that my crontab now had the appropriate headers. I crossed my fingers 🤞 and&hellip; IT WORKED 🎉</p>
+<p>So, I guess if you want to use ruby gems and cron, make sure to use RVM.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/onlymattjohnson" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    (c) 2023  Matt Johnson
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

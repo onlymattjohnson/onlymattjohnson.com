@@ -9,6 +9,6 @@ This page holds a variety of personal data metrics that I'm interested in tracki
 
 ## Github
 
-A summary of github contributions that I've made. This chart is generated with the very helpful ruby gem [githubchart](https://github.com/akerl/githubchart) by [Les Aker](https://akerl.org/). I used to use the [rshah API](https://ghchart.rshah.org/) to generate these but it stopped working. I have a [cron job](/oh-my-cron) running every 15 minutes to refresh this.
+A summary of github contributions that I've made. This chart is generated with the very helpful ruby gem [githubchart](https://github.com/akerl/githubchart) by [Les Aker](https://akerl.org/). I used to use the [rshah API](https://ghchart.rshah.org/) to generate these but it stopped working. I have a [cron job]({{<ref "/posts/2023-07-18-oh-my-cron.md">}}) running every 15 minutes to refresh this.
 
 ![My github contributions graph](/img/github.svg)
